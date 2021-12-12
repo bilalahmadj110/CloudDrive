@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "895274834384",
+    "project_id": "cloud-drive-ad4e4",
+    "storage_bucket": "cloud-drive-ad4e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895274834384:android:b369dc869eaf0e4d8401d5",
+        "android_client_info": {
+          "package_name": "com.example.clouddrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895274834384-0seqsi8c5hcktcbo3jecdb48je89a54e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clouddrive",
+            "certificate_hash": "0623a37bbc2dcfe1f18e6e75fe00d96ddb962971"
+          }
+        },
+        {
+          "client_id": "895274834384-311rj0qpjkplq61a6538c75r5tj1qs5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXUcIpl7WcMENT7ZRO7ChDHXeDH6aftnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895274834384-311rj0qpjkplq61a6538c75r5tj1qs5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

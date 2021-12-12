@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- NOTE: order is important (the first matching state(s) is what is rendered) -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/pressed_button" />
+
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/enabled_button" />
+
+    <item
+        android:drawable="@drawable/normal_button" />
+
+</selector>
+

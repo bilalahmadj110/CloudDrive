@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1E1E1"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.home.HomeFragment">
+
+    <include layout="@layout/custom_load_more_horizontal"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshlayout"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/custom_view"
+                tools:itemCount="20"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:menu_animationDelayPerItem="50"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true"
+            app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            app:srcCompat="@drawable/ic_cloud_upload_svgrepo_com">
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icons8_folder"
+                app:fab_size="mini"
+                android:tint="@color/white"
+                app:backgroundTint="@color/white"
+                app:menu_showShadow="true"
+                app:fab_label="Create new folder"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_create"
+                app:menu_showShadow="true"
+                android:tint="@color/white"
+                app:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cloud_upload_svgrepo_com"
+                app:fab_size="mini"
+                app:fab_label="Upload file"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

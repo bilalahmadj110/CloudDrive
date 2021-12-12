@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/custom_file_card"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ripple_effect"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+            android:layout_width="40dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="2dp"
+            android:paddingVertical="5dp"
+            android:layout_height="40dp"
+            tools:srcCompat="@drawable/ic_unknown"
+            android:id="@+id/file_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            tools:text="Full Book Subjective 12th (2021-2022) list.pdf"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/file_title"
+            app:layout_constraintTop_toTopOf="@+id/file_icon" app:layout_constraintStart_toEndOf="@+id/file_icon"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginEnd="32dp"/>
+    <ImageButton
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic___vertical_dots"
+            android:id="@+id/more_btn"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/file_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/file_icon"
+    />
+    <TextView
+            android:text="Created: Nov 16, 2021"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/file_created"
+            app:layout_constraintTop_toBottomOf="@+id/file_title"
+            app:layout_constraintBottom_toBottomOf="@+id/file_icon"
+            app:layout_constraintStart_toStartOf="@+id/file_title"/>
+
+    <TextView
+            android:text="•"
+            android:textSize="18sp"
+            android:paddingTop="4dp"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/file_created"
+            app:layout_constraintTop_toBottomOf="@+id/file_title"
+            app:layout_constraintBottom_toBottomOf="@+id/file_created"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            tools:text="258.77 KiB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/file_size"
+            app:layout_constraintTop_toTopOf="@+id/file_created" app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintBottom_toBottomOf="@+id/file_created" android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp" app:srcCompat="@drawable/ic_iconmonstr_arrow_25"
+            android:id="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/more_btn" app:layout_constraintStart_toStartOf="@+id/more_btn"
+            app:layout_constraintEnd_toEndOf="@+id/more_btn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
