@@ -201,6 +201,7 @@ public class HomeFragment extends Fragment {
         AndroidNetworking.get(link)
                 .addHeaders("email", email_token[0])
                 .addHeaders("authorization", email_token[1])
+                .addHeaders("isadminfiles", "1")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -366,6 +367,7 @@ public class HomeFragment extends Fragment {
                 .addHeaders("email", email_token[0])
                 .addHeaders("authorization", email_token[1])
                 .addHeaders("name", name)
+                .addHeaders("isadminfiles", "1")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -424,6 +426,7 @@ public class HomeFragment extends Fragment {
                 .addMultipartFile("file", new File(path))
                 .addHeaders("email", email_token[0])
                 .addHeaders("authorization", email_token[1])
+                .addHeaders("isadminfiles", "1")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .setUploadProgressListener(new UploadProgressListener() {

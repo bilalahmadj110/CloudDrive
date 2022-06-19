@@ -156,6 +156,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         AndroidNetworking.get(Globals.DELETE_API + obj.explorer)
                 .addHeaders("email", email_token[0])
                 .addHeaders("authorization", email_token[1])
+                .addHeaders("isadminfiles", "1")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -241,6 +242,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 .setTag("downloadTest")
                 .addHeaders("email", email_token[0])
                 .addHeaders("authorization", email_token[1])
+                .addHeaders("isadminfiles", email_token[1])
                 .setPriority(Priority.HIGH)
                 .build()
                 .setDownloadProgressListener(new DownloadProgressListener() {
