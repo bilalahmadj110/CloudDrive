@@ -41,11 +41,6 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ForgotPassword"
-                android:exported="true"
-                android:parentActivityName=".LoginActivity"
-                android:screenOrientation="portrait"/>
-        <activity
                 android:name=".RegisterAccountActivity"
                 android:exported="true"
                 android:parentActivityName=".LoginActivity"

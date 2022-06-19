@@ -16,6 +16,15 @@ public class Globals {
     public static String SIGN_IN_API = API + "/login";
 
     /*
+        header: {
+            "new" : new_password,
+            "password" : old_password
+            "email" : email
+        },
+     */
+    public static String CHANGE_PASSWORD_API = API + "/change_password";
+
+    /*
         Explorer
      */
     public static String EXPLORER_API = API + "/explorer";

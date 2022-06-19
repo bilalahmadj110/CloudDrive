@@ -10,18 +10,26 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import okhttp3.OkHttpClient;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -117,11 +125,6 @@ public class LoginActivity extends AppCompatActivity {
             if (imm != null)
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
-    }
-
-    public void Forgot() {
-        startActivity(new Intent(LoginActivity.this, ForgotPassword.class));
-        overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
     }
 
     public void Create() {

@@ -252,7 +252,7 @@ public class CommonClass {
         return sdf.format(new Date());
     }
 
-    static String find(String code) {
+    public static String find(String code) {
         for (String[] codeNMsg : Globals.HTTP_CODES) {
             if (code.equals(codeNMsg[0]))
                 return codeNMsg[1].split("\n")[0];

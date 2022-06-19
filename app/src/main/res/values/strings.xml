@@ -63,4 +63,9 @@
     <string name="action_delete">Delete</string>
     <string name="input_dialog">Please enter a directory name to create in the current path. (max 250 characters allowed)</string>
     <string name="diasslow_char"><![CDATA[" /  : * ? \" < > | "]]></string>
+    <string name="new_pass_lbl">Set a new password</string>
+    <string name="comfirm_pass_lbl">Confirm new password</string>
+    <string name="change_pass_lbl">Change password</string>
+    <string name="menu_change">Change Password</string>
+    <string name="old_pass_lbl">Enter your old password</string>
 </resources>

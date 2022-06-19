@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,8 +14,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
 import com.example.clouddrive.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationView;
+
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         userPref = new UserPref(getApplicationContext());
-
 
 
         if (getIntent().getExtras() != null) {
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_about)
+                R.id.nav_home, R.id.nav_change, R.id.nav_about)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
