@@ -1,13 +1,13 @@
 package com.example.clouddrive;
 
+import static android.content.Context.ACTIVITY_SERVICE;
+
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 
 import java.io.File;
-
-import static android.content.Context.ACTIVITY_SERVICE;
 
 public class UserPref {
 
@@ -51,11 +51,18 @@ public class UserPref {
         editor.apply();
     }
 
-    public void addAuthentication(String email, String token, String regDate, String name) {
+    public void setPreferences(String key, boolean value) {
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(key, value);
+        editor.apply();
+    }
+
+    public void addAuthentication(String email, String token, String regDate, String name, boolean isAdmin) {
         setPreferences("email", email);
         setPreferences("token", token);
         setPreferences("name", name);
         setPreferences("regDate", regDate);
+        setPreferences("is_admin", isAdmin);
     }
 
     public void clearPref(String key) {
@@ -72,10 +79,11 @@ public class UserPref {
     public String[] getAuthentication() {
         String email = getPreferences("email", "");
         String token = getPreferences("token", "");
+        boolean isAdmin = getPreferences("is_admin", false);
         if (email.equals("") || token.equals(""))
             return null;
         else
-            return new String[]{email, token};
+            return new String[]{email, token, isAdmin ? "1" : "0"};
     }
 
     public void logout() {
@@ -114,6 +122,10 @@ public class UserPref {
 
     public String getPreferences(String key, String def) {
         return preferences.getString(key, def);
+    }
+
+    public boolean getPreferences(String key, boolean def) {
+        return preferences.getBoolean(key, def);
     }
 
     public int getPreferences(String key, int def) {

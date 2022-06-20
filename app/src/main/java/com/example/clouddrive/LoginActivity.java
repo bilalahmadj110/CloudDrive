@@ -163,6 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        MLog.log(response.toString());
                         // do anything with response
                         commonClass.cancelProgress();
                         applyLogin(email_, response);
@@ -198,7 +199,8 @@ public class LoginActivity extends AppCompatActivity {
                     email,
                     response.getString("token"),
                     response.getString("regdate"),
-                    response.getString("name")
+                    response.getString("name"),
+                    response.getBoolean("is_admin")
             );
             doneLogin(response);
         } catch (JSONException e) {
