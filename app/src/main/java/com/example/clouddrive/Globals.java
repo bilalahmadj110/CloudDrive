@@ -5,7 +5,7 @@ import com.example.clouddrive.ui.home.HomeModel;
 
 public class Globals {
 
-    private static final String IP = "192.168.18.107:81";
+    private static final String IP = "66.29.142.253";
     public static String API = "http://" + IP + "/android/api";
 
     public static String SIGN_UP_API = API + "/create";

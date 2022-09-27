@@ -89,8 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -129,8 +128,7 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:text="@string/create_a_new_account"
-                android:textColor="@color/dark_grey"
-                android:visibility="gone" />
+                android:textColor="@color/dark_grey" />
 
         </LinearLayout>
 
