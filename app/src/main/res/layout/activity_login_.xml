@@ -80,6 +80,16 @@
                         android:text="@string/login"
                         android:textColor="@android:color/white" />
 
+                    <Button
+                        android:id="@+id/forgot_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="10dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:text="Forgot password"
+                        android:textColor="@color/colorHoloBlueDark" />
+
 
                 </LinearLayout>
 

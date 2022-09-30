@@ -13,7 +13,7 @@
 
     <string name="cautions">
         • The password must contain at least six characters.
-        <br/>\n
+        <br />\n
         • Don\'t use your original Email account password.
     </string>
 
@@ -49,7 +49,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">Welcome To Celestine<br/>A Mini Cloud Service</string>
+    <string name="nav_header_subtitle">Welcome To Celestine<br />A Mini Cloud Service</string>
     <string name="nav_app_ver">App ver 1.0</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logout">Logout</string>

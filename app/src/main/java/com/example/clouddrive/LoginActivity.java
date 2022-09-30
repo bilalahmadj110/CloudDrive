@@ -92,30 +92,30 @@ public class LoginActivity extends AppCompatActivity {
                 if (scrollView != null) {
                     if (getSupportActionBar() != null)
                         if (scrollView.getScrollY() > 1) {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                getSupportActionBar().setElevation(10);
-                            }
+                            getSupportActionBar().setElevation(10);
                         } else {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                getSupportActionBar().setElevation(1);
-                            }
+                            getSupportActionBar().setElevation(1);
                         }
                 }
             }
         });
 
-        password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    hideKeyboard();
-                    handleEmailPassword();
-                }
-                return false;
+        findViewById(R.id.forgot_button).setOnClickListener(v -> resetPassword());
+
+        password.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                hideKeyboard();
+                handleEmailPassword();
             }
+            return false;
         });
 
         hideKeyboard();
+    }
+
+    public void resetPassword() {
+        startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
+        overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
     }
 
     public void hideKeyboard() {

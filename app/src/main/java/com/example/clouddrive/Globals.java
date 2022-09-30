@@ -9,6 +9,7 @@ public class Globals {
     public static String API = "http://" + IP + "/android/api";
 
     public static String SIGN_UP_API = API + "/create";
+    public static String RESET_API = API + "/reset";
     /* FORM Parameter
         Email,
         Password
